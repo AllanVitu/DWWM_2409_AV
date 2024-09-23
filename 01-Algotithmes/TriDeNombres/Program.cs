@@ -40,11 +40,15 @@
             }
             else if (c < b && b < a)
             {
+                Console.WriteLine(c + " " + b + " " + a);
+            }
+            else if (c < a && a < b)
+            {
                 Console.WriteLine(c + " " + a + " " + b);
             }
-            else if (c < b && a < c)
+            else if (b < c && c < a)
             {
-                Console.WriteLine(c + " " + b + " " + a);
+                Console.WriteLine(b + " " + c + " " + a);
             }
             else
             {
