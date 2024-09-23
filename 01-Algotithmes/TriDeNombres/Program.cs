@@ -26,6 +26,7 @@
 
             String result;
 
+            
             if (a < b && b < c)
             {
                 Console.WriteLine(a + " " + b + " " + c);
