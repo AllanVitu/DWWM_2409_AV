@@ -4,25 +4,19 @@
     {
         static void Main(string[] args)
         {
-            int chA = 0;
+            int chA;
 
             int chB;
 
-            Boolean result;
+            Console.WriteLine("Saisissez un nombre : ");
+            chA = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+
+            Console.WriteLine("Saisissez un deuxieme nombre : ");
+            chB = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
 
 
-            Console.WriteLine("Saisissez un chiffre : ");
-            Console.ReadLine();
-
-
-            for (int i = 0; i < args.Length; i++)
-            {
-                if(chA == 3)
-                {
-                    chB = 7;
-                    result = 4
-                }
-            }
 
 
         }

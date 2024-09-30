@@ -10,7 +10,7 @@
             
             name = Console.ReadLine();
 
-            Console.WriteLine("Bonjour " + name);
+           
             
             while(name.Length < 2)
             {
@@ -18,7 +18,9 @@
                 name = Console.ReadLine();
 
             }
-            Console.WriteLine("Vous avez epuiser toutes vos chances !");
+
+            Console.WriteLine("Bonjour " + name);
+
         } 
     }
 }
