@@ -8,15 +8,20 @@
 
             int chB;
 
-            int result;
+            Boolean result;
 
 
             Console.WriteLine("Saisissez un chiffre : ");
             Console.ReadLine();
 
-            if (chA == 1)
+
+            for (int i = 0; i < args.Length; i++)
             {
-                chB = 5;
+                if(chA == 3)
+                {
+                    chB = 7;
+                    result = 4
+                }
             }
 
 
