@@ -1,9 +1,51 @@
-﻿namespace utilisateurEnregistrer
+﻿using System.Collections;
+
+namespace utilisateurEnregistrer
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+
+            /*ArrayList utilisateurs = new ArrayList();
+
+            utilisateurs.Add(1);
+            utilisateurs.Add("toto");
+            utilisateurs.Add(new DateTime());
+
+
+            try
+            {
+                int entier = (int)utilisateurs[0];
+            }
+            catch (Exception ex)
+            {
+                // gestion de l'erreur
+            }
+
+            
+
+            int? int entier2 = utilisateurs[0] as int?;
+
+            if(entier2 != null)
+            {
+
+            }
+            if (utilisateurs[0] is int entier3)
+            {
+
+            }
+            
+            Console.Read();
+
+            object toto = 1;
+            object tata = "chaine";
+
+            string result = (string)tata;*/
+
+
+
+            
             string[] utilisateurs;
 
             string saisieNomPrenom;
