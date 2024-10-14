@@ -15,27 +15,31 @@
 
 
 
-            while(saisieUtilisateur == MOT_DE_PAASSE || nombreTentavieRestant < nombreDeTentative)
+            while( motDePasse == false && nombreTentavieRestant < nombreDeTentative)
             {
                 Console.WriteLine("Saisissez votre mot de passe : ");
                 
                 saisieUtilisateur = Console.ReadLine();
                 
-                nombreTentavieRestant++;
-            }
-            if(nombreTentavieRestant == nombreDeTentative)
-            {
-                Console.WriteLine("votre compte est bloqué");
-            }
+            
+                if(saisieUtilisateur == MOT_DE_PAASSE)
+                {
+                Console.WriteLine("Vous etes connecté");
+                motDePasse = true;
+                }
+
             else
             {
-                saisieUtilisateur = MOT_DE_PAASSE;
+                    nombreTentavieRestant++;   
+            }
                 
-                Console.WriteLine("Vous etes connecté");
+            }
+            if(nombreDeTentative == nombreTentavieRestant)
+            {
+                Console.WriteLine("Votre compte est bloqué");
             }
             
-            Console.ReadLine();
-
+            
         }
     }
 }
