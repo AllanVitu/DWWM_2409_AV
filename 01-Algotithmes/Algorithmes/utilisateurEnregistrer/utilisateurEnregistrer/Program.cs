@@ -41,7 +41,7 @@ namespace utilisateurEnregistrer
             object toto = 1;
             object tata = "chaine";
 
-            string result = (string)tata;*/
+            string result = (string)tata;*/<
 
 
 
