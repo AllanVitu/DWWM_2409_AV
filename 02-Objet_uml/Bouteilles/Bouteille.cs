@@ -47,18 +47,7 @@ namespace Bouteilles
             this.nom = bouteilleACopier.nom;
         }
 
-        public Bouteille(Bouteille bouteilleACopier)
-        : this(bouteilleACopier.contenanceEnLitre, bouteilleACopier.contenuEnLitre, bouteilleACopier.estOuverte)
-        {
-        }
-
-
         //Méthode ToString pour connaitre l'état de sa class
-
-        public string ToString()
-        {
-            return base.ToString() + "contenanceEnL" + contenanceEnLitre.ToString() + "contenuEnL" + contenanceEnLitre + "estOuverte" + estOuverte;
-        }
 
         public override string ToString()
         {
@@ -67,7 +56,7 @@ namespace Bouteilles
 
         public override bool Equals(object? obj)
         {
-            return this.nom.Equals((Bouteille)obj));
+            return this.nom.Equals(((Bouteille)obj));
         }
     }
 }
