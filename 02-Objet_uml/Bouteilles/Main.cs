@@ -6,6 +6,20 @@
         {
             Bouteille bouteille1;
             bouteille1 = new Bouteille();
+            Console.WriteLine(bouteille1.ToString());
+
+            
+            
+                
+            Bouteille bouteilleClone = new Bouteille(bouteille1);
+            
+            if (bouteille1.Equals(bouteilleClone))
+            {
+                Console.WriteLine(" c'est égal ");
+            }
+            
+            int a = 0;
+            
             
             
             Bouteille bouteille2; 
@@ -22,21 +36,6 @@
             
             Bouteille bouteille5;
             bouteille5 = new Bouteille(1.2f, 1.3f, false);
-
-
-
-            //float contenanceEnLitre = bouteille2contenuEnLitre();
-
-            //float contenuEnLitreDeBouteille2 = bouteille2.contenuEnLitre();
-
-            //bool bouteilleRempli = bouteille2.Remplir(1.2f);
-
-            //bool bouteilleVide = bouteille2.LaVider(1.5f);
-            
-            //bool bouteilleOuvert = bouteille2.Ouvrir();
-
-            //bool bouteilleFermer = bouteille2.Fermer();
-
 
         }
     }

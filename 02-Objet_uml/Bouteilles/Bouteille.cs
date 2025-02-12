@@ -10,9 +10,10 @@ namespace Bouteilles
     internal class Bouteille
     {
         //attributs
-        private float contenanceEnLitre;
-        private float contenuEnLitre;
-        private bool estOuverte;
+        private float contenanceEnLitre {get; init;}
+        private float contenuEnLitre {get; set;}
+        private bool estOuverte {get; set;}
+        private string nom { get; set;}
 
         //constructeurs
 
@@ -38,12 +39,13 @@ namespace Bouteilles
         }
 
         //constructeur par clonage
-        //public Bouteille(Bouteille bouteilleACopier)
-        //{
-        //    this.contenanceEnLitre = bouteilleACopier.contenanceEnLitre;
-        //    this.contenuEnLitre = bouteilleACopier.contenuEnLitre;
-        //    this.estOuverte = bouteilleACopier.estOuverte;
-        //}
+        public Bouteille(Bouteille bouteilleACopier)
+        {
+           this.contenanceEnLitre = bouteilleACopier.contenanceEnLitre;
+           this.contenuEnLitre = bouteilleACopier.contenuEnLitre;
+           this.estOuverte = bouteilleACopier.estOuverte;
+            this.nom = bouteilleACopier.nom;
+        }
 
         public Bouteille(Bouteille bouteilleACopier)
         : this(bouteilleACopier.contenanceEnLitre, bouteilleACopier.contenuEnLitre, bouteilleACopier.estOuverte)
@@ -56,6 +58,16 @@ namespace Bouteilles
         public string ToString()
         {
             return base.ToString() + "contenanceEnL" + contenanceEnLitre.ToString() + "contenuEnL" + contenanceEnLitre + "estOuverte" + estOuverte;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " contenanceEnlItre=" + contenanceEnLitre;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return this.nom.Equals((Bouteille)obj));
         }
     }
 }
