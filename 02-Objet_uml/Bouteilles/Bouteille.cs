@@ -34,7 +34,7 @@ namespace Bouteilles
 
         //constructeur hybride classique defaut
         public Bouteille(float contenanceEnLitre)
-        : this(contenanceEnLitre, contenanceEnLitre, false)
+        :this(contenanceEnLitre, contenanceEnLitre, false)
         {
         }
 
@@ -44,7 +44,7 @@ namespace Bouteilles
            this.contenanceEnLitre = bouteilleACopier.contenanceEnLitre;
            this.contenuEnLitre = bouteilleACopier.contenuEnLitre;
            this.estOuverte = bouteilleACopier.estOuverte;
-            this.nom = bouteilleACopier.nom;
+           this.nom = bouteilleACopier.nom;
         }
 
         //Méthode ToString pour connaitre l'état de sa class
