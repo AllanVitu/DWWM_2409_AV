@@ -1,0 +1,45 @@
+{
+   
+        "utilisateur": [
+            {
+            "id": 1,
+            "nom d'utilisateur": "Drawk",
+            "patronyme": "Draw",
+            "prenom": "Coucou",
+            "date de naissance": "1999/12/05"
+            },
+
+            {
+            "id": 2,
+            "nom d'utilisateur": "Zelda",
+            "patronyme": "l'emmerdeuse",
+            "prenom": "Zelda",
+            "date de naissance": "1289/12/12"
+            },
+
+            {
+            "id": 3,
+            "nom d'utilisateur": "Némésis",
+            "patronyme": "Prime",
+            "prenom": "Optimus",
+            "date de naissance": "1856/10/05"
+            },
+                    
+            {
+            "id": 4,
+            "nom d'utilisateur": "vad",
+            "patronyme": "vochu",
+            "prenom": "Czouzou",
+            "date de naissance": "1529/12/05"
+            },
+
+            {
+            "id": 5,
+            "nom d'utilisateur": "Goku",
+            "patronyme": "Son",
+            "prenom": "Zeno",
+            "date de naissance": "1979/09/05"
+            }
+        ]
+    
+}
