@@ -46,9 +46,13 @@ const saisiePx = () =>{
         zoneTaille.innerText = taille
         zoneText.style.fontSize =  taille + "px";
     }else{
+
+        zoneTaille.innerText = 16;
+        zoneText.style.fontSize =  16 + "px";
+        saisieManuelle.value=16;
         alert("Veuillez saisir une chiffre entre 8 et 48 !")
     }
 }
-btnValiderSaisie.addEventListener("click", saisiePx)
+saisieManuelle.addEventListener("blur", saisiePx);
 
 
