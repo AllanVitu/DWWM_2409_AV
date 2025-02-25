@@ -1,0 +1,20 @@
+*{
+    padding: 20 px;
+    margin: 10 px;
+    background-color: rgb(32, 36, 41);
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+button{
+    background-color: rgb(9, 16, 78);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+button:hover{
+    border: 2px solid #0993f0;
+    padding: 15px 30px;
+    transition: 0.7;
+}
+
