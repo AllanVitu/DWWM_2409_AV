@@ -1,63 +1,48 @@
-﻿namespace TriDeNombres
+﻿using System.Runtime.CompilerServices;
+
+namespace TriDeNombres
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int a;
 
-            int b;
+            int numA;
+            
+            int numB;
+            
+            int numC;
 
-            int c;
+            int[] nombres;
+
+            string saisie;
 
             
-            Console.WriteLine("Saisissez un nombre");
-           
-            a = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Saisissez un nombre");
-
-            b = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Saisissez un nombre");
-
-            c = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Entrez le premier nombre");
+            saisie = Console.ReadLine();
+            numA = int.Parse(saisie);
 
 
-            String result;
+            Console.WriteLine("Entrez le 2èmes nombre");
+            saisie = Console.ReadLine();
+            numB = int.Parse(saisie);
 
-            
-            if (a < b && b < c)
+
+            Console.WriteLine("Entrez le 3èmes nombre");
+            saisie = Console.ReadLine();
+            numC = int.Parse(saisie);
+
+            nombres = [numA, numB, numC];
+            Array.Sort(nombres);
+
+
+            for(int i = 0; i < nombres.Length; i++)
             {
-                Console.WriteLine(a + " " + b + " " + c);
+                Console.WriteLine(nombres[i]);
             }
-            else if (a < c && c < b)
-            {
-                Console.WriteLine(a + " " + c + " " + b);
-            }
-            else if (b < a && a < c)
-            {
-                Console.WriteLine(b + " " + c + " " + a);
-            }
-            else if (c < b && b < a)
-            {
-                Console.WriteLine(c + " " + b + " " + a);
-            }
-            else if (c < a && a < b)
-            {
-                Console.WriteLine(c + " " + a + " " + b);
-            }
-            else if (b < c && c < a)
-            {
-                Console.WriteLine(b + " " + c + " " + a);
-            }
-            else
-            {
-                result = "La suite est invalide";
-            }
-                
-            
-            
+
+            Console.ReadLine();
+   
         }
     }
 }
