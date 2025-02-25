@@ -1,19 +1,38 @@
-const tailleText = document.querySelector('span')
-
-const augmenterText = document.querySelector('#augmenter')
-
-const diminuerText = document.querySelector('#diminuer')
-
-let text = document.querySelector('#paragraphe')
-
-let taille = parseInt(tailleText.textContent)
+const btnAugmenterText = document.querySelector('#augmenter')
+const btnDiminuerText = document.querySelector('#diminuer')
+const zoneText = document.querySelector ('#text')
+let zoneTaille = document.querySelector('#zoneTaille')
+let taille = 16
 
 
 
-const tailleMax = () => {
-    taille++;
-    augmenterText.innerText = taille;
-    text.style.fontSize = taille + "px";
+
+const augmenterText = () =>{
+    if(taille < 48){
+        taille++;
+        zoneTaille.innerText = taille;
+        zoneText.style.fontSize = taille + "px";
+    }else{
+        taille = 16;
+        zoneTaille.innerHTML = taille;
+        zoneText.style.fontSize = taille + "px";
+    }
 }
 
-augmenterText.addEventListener("click", tailleMax)
+btnAugmenterText.addEventListener("click", augmenterText);
+
+
+const diminuerText = () =>{
+    if(taille > 8 ){
+        taille--;
+        zoneTaille.innerText = taille;
+        zoneText.style.fontSize = taille + "px";
+    }else{
+        taille = 16;
+        zoneTaille.innerHTML = taille;
+        zoneText.style.fontSize = taille + "px";
+    
+    }
+}
+
+btnDiminuerText.addEventListener("click", diminuerText);
