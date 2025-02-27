@@ -8,7 +8,7 @@ let i
 
 
 
-const afficher = () => {
+const affichage = () => {
     let prenomSaisie = document.querySelector("#saisiePrenom").value    
     let ageSaisie = document.querySelector("#saisieAge").value
     let ageRetraite = 0
@@ -46,7 +46,7 @@ const afficher = () => {
                                 }
 }
 
-boutonValider.addEventListener("click", afficher)
+boutonValider.addEventListener("click", affichage)
 
 
 
