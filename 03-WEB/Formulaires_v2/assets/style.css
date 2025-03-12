@@ -1,18 +1,17 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
 .big-shoulders-stencil-uniquifier {
     font-family: "Big Shoulders Stencil", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: normal;
     font-style: normal;
-  }
+}
 
-body{
+body {
     background: #f6f5f7;
     display: flex;
     justify-content: center;
@@ -21,7 +20,7 @@ body{
     height: 100vh;
 }
 
-.container{
+.container {
     position: relative;
     overflow: hidden;
     min-height: 480px;
@@ -29,48 +28,47 @@ body{
     max-width: 100%;
     background-color: #f6f5f7;
     border-radius: 10px;
-    box-shadow: 0 8px 24px  rgba(0, 32, 63, 45),
-    0 8px 8px rgba(0, 32, 63, 45);
+    box-shadow: 0 8px 24px rgba(0, 32, 63, 0.45), 0 8px 8px rgba(0, 32, 63, 0.45);
 }
 
-.form-container{
+.form-container {
     position: absolute;
     top: 0;
     height: 100%;
 }
 
-.sign-up-container{
+.sign-up-container {
     left: 0;
     width: 50%;
     opacity: 0;
 }
 
-.container.panel.active .sign-up-container{
+.container.panel.active .sign-up-container {
     transform: translateX(100%);
 }
 
-.container.panel.active .login-container{
+.container.panel.active .login-container {
     transform: translateX(100%);
 }
 
-.login-container{
+.login-container {
     left: 0;
     width: 50%;
     z-index: 2;
 }
 
-form{
+form {
     background-color: #f6f5f7;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding:  0 50px;
+    padding: 0 50px;
     height: 100%;
     text-align: center;
 }
 
-input{
+input {
     background-color: rgb(110, 190, 255);
     border: none;
     padding: 12px 15px;
@@ -78,39 +76,38 @@ input{
     width: 100%;
 }
 
-button.ghost{
+button.ghost {
     background-color: transparent;
 }
 
-button{
+button {
     background-color: rgb(110, 190, 255);
     color: #00203f;
-    border: #f6f5f7;
+    border: 2px solid #00203f;
     font-size: 16px;
     font-weight: bold;
     padding: 16px 32px;
     margin-top: 24px;
     letter-spacing: 1px;
     border-radius: 50px;
-    border-color: #00203f;
     transition: 1s ease-in;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     background-color: #00203f;
     color: #f6f5f7;
 }
 
-button:active{
-    transform:scale(.95) ;
+button:active {
+    transform: scale(.95);
 }
 
-.social-container{
+.social-container {
     margin: 24px 0;
 }
 
-.social-container a{
+.social-container a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -122,22 +119,22 @@ button:active{
     border: 1px solid #00203f;
 }
 
-h1{
+h1 {
     margin: 0;
     font-size: 24px;
 }
 
-span{
+span {
     font-size: 14px;
 }
 
-a{
+a {
     text-decoration: none;
     font-size: 14px;
-    margin: 8px 0 16px
+    margin: 8px 0 16px;
 }
 
-.overlay-container{
+.overlay-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -146,9 +143,9 @@ a{
     z-index: 100;
 }
 
-.overlay{
-    background: linear-gradient(to rigth, rgb(110, 190, 255), rgb(110, 190, 255));
-    background-color:rgb(110, 190, 255);
+.overlay {
+    background: linear-gradient(to right, rgb(110, 190, 255), rgb(110, 190, 255));
+    background-color: rgb(110, 190, 255);
     color: #00203f;
     position: relative;
     left: -100%;
@@ -157,7 +154,7 @@ a{
     transform: translateX(0);
 }
 
-.overlay-panel{
+.overlay-panel {
     position: absolute;
     display: flex;
     align-items: center;
@@ -171,19 +168,19 @@ a{
     transform: translateX(0);
 }
 
-.overlay-left{
-    transform: translateX(-20);
+.overlay-left {
+    transform: translateX(-20px);
 }
 
-.overlay-rigth{
+.overlay-right {
     right: 0;
     transform: translateX(0);
 }
 
-p{
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 100px;
-  letter-spacing: -5px;
-  margin: 10px 0 30px;  
+p {
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin: 10px 0 30px;
 }
