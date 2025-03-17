@@ -138,6 +138,9 @@ span {
 
 #btnNoCompte{
     cursor: pointer;
+    display: block;
+    border-radius: 1px;
+    border-color: #00203f;
 }
 
 a {
