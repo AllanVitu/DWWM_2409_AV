@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    position: relative;
+    display: flex;
     overflow: hidden;
     min-height: 480px;
     width: 768px;
@@ -32,7 +32,7 @@ body {
 }
 
 .form-container {
-    position: absolute;
+
     top: 0;
     height: 100%;
 }
@@ -40,21 +40,29 @@ body {
 .sign-up-container {
     left: 0;
     width: 50%;
-    opacity: 0;
+    opacity: 0; /* Le formulaire est invisible par défaut */
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.6s ease-in-out;
 }
 
-.container.panel.active .sign-up-container {
+.container.active .sign-up-container {
+    opacity: 1; /* Rend le formulaire d'inscription visible */
     transform: translateX(100%);
+    z-index: 2;
 }
 
-.container.panel.active .login-container {
+.container.active .login-container {
+    opacity: 0; /* Rend le formulaire de connexion invisible */
     transform: translateX(100%);
+    z-index: 1;
 }
 
 .login-container {
     left: 0;
     width: 50%;
+    opacity: 1; /* Le formulaire de connexion est visible par défaut */
     z-index: 2;
+    transition: opacity 0.3s ease-in-out, transform 0.6s ease-in-out;
 }
 
 form {
@@ -69,7 +77,7 @@ form {
 }
 
 input {
-    background-color: rgb(110, 190, 255);
+    background-color: rgb(255, 110, 110);
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
@@ -81,7 +89,7 @@ button.ghost {
 }
 
 button {
-    background-color: rgb(110, 190, 255);
+    background-color: rgb(255, 110, 110);
     color: #00203f;
     border: 2px solid #00203f;
     font-size: 16px;
@@ -116,7 +124,7 @@ button:active {
     width: 40px;
     border-radius: 50%;
     background-color: #f6f5f7;
-    border: 1px solid #00203f;
+    border: 1px solid #ad2525;
 }
 
 h1 {
@@ -144,8 +152,8 @@ a {
 }
 
 .overlay {
-    background: linear-gradient(to right, rgb(110, 190, 255), rgb(110, 190, 255));
-    background-color: rgb(110, 190, 255);
+    background: linear-gradient(to right, rgb(228, 96, 96), rgb(255, 110, 110));
+    background-color: rgb(245, 47, 47);
     color: #00203f;
     position: relative;
     left: -100%;
