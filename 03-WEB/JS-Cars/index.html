@@ -8,26 +8,18 @@
     <title>Cars</title>
 </head>
 <body>
-    <script src="./assets/cars.json"></script>
-    <script>
-        $(function(){
-            $('#btnRecherche').click(function){
-                $.getJSON(src)
-            }
-        }
-    </script>
-
-
-
-
-
+    <header>
+        <h1 id="rchrVoiture">Rechercher une voiture</h1>
+    </header>
         <div class="recherche">
             <form action="#">
-            <h1 id="rchrVoiture">Rechercher une voiture</h1>
             <p>Nom de la voiture</p>
-            <input type="text" placeholder="Nom Voiture">
-            <button id="btnRecherche">Rechercher</button>
-        </form>
+            <input id="carName" name="car_name" type="search" required placeholder="Nom Voiture">
+            <input id="btnRecherche" type="button" value="Rechercher">
+        </form>        
+    </div>
+    <div id="result">
+
     </div>
 </body>
 </html>
