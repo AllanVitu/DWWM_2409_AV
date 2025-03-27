@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dis/vue.global.js"></script>
+    <script src="./main.js" type="module"></script>
+    <title>Compteur de clic</title>
+</head>
+<body>
+    <h1>Compteur de clics</h1>
+    
+<div id="app">
+    <button @click="incrementer">Ajouter 1</button>
+    <button @click="reinitialiser">Reinitialiser</button>
+
+    <p>Vous avez cliqué: {{nbClics}} fois</p>
+</div>
+</body>
+</html>
