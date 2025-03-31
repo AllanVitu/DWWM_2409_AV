@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Checklist</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>The Checklist Auto-Moto</h1>
+        <ajout @nouvellenote="ajouterNote"> </ajout>
+        <note v-for="todo in todos" v-bind:content="todo" @click="inverser"></note>
+        <ordreAlpha v-for="todo in todos"></ordreAlpha>
+        <img id="car" src="./imgs/car-logo.png" alt="Car">
+    </div>
+    
+
+    <script>
+        const vm=Vue.createApp({
+            data(){
+                return{
+                    todos: ['Audi', 'BMW', 'Alpha-Roméo', 'Chevrolet']
+                }
+            },
+            methods:{
+                inverser(){
+                    this.todos.reverse();
+                },
+                ajouterNote(message){
+                    this.todos.push(message);
+                }
+            }
+        })
+        vm.component('ordreAlpha',{
+            
+        });
+        vm.component('note',{
+            props:['content'],
+            template: `<p> {{ content }} </p>`
+        });
+        vm.component('ajout',{
+            props:[],
+            emits:['nouvellenote'],
+            data(){
+                return{
+                    interne:' '
+                }
+            },
+            methods:{
+                enregistrementNote(){
+                    this.$emit('nouvellenote',this.interne);
+                    this.interne = ' ';
+                }
+            },
+            template: ` <input type="text" v-model="interne">
+        <a href="#" @click="enregistrementNote" v-if="interne != '' ">Ajouter</a>
+        {{ interne }}
+        `        
+        });
+        vm.mount('#app');
+    </script>
+</body>
+</html>

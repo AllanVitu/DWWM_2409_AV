@@ -1,0 +1,23 @@
+*{
+    margin: 5px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#app{
+    border: 10px;
+    border-radius: 5%;
+    background-color: rgb(85, 107, 106);
+    font-style: italic;
+    display: block;
+    left: 0, 20px;
+}
+
+body{
+    background-color: rgb(30, 30, 31);
+}
+
+#car{
+    right: 20%;
+}
+
