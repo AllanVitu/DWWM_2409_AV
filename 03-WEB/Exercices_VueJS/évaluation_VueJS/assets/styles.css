@@ -6,3 +6,20 @@
     --color5: #6E7799;
     --color6: #C490D1;
 }
+
+*{
+    margin: 5px;
+    padding: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #30343F;
+    color: #FAFAFF;
+    
+}
+#titre{
+    color: #C490D1;
+}
+.table{
+    
+}
