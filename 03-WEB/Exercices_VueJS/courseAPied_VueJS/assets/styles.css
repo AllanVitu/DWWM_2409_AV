@@ -1,0 +1,18 @@
+:root {
+    --base-bg: #111111;
+    --base-txt: #CCCCCC;
+    --base-link: #E4D9FF;
+    --base-btn: #085E8F;
+}
+*{
+    margin: 5px;
+    padding: 2px;
+}
+#formu{
+    display: flex;
+}
+body{
+    background-color: #111111;
+    color: #CCCCCC;
+    border: 2px, solid;
+}

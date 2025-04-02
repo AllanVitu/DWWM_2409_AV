@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Course à pied</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Résultat de la course</h1>
+
+        <form id="formu">
+            <div>
+            <label for="number">Participants</label>
+            </div>
+
+            <div>
+                <label for="text">Gagnant</label>
+            </div>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pays</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Temps final</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>{{  }}</td>
+                    <td>{{  }}</td>
+                    <td>{{  }}</td>
+                    <td>{{  }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const cap = Vue.createApp({
+            data(){
+                return{
+                    dataCap: []
+                }
+            },
+
+            methods: {
+                async result(){
+                    const response = await fetch('./assets/resultat10000metres.json')
+                    return await response.json();
+                }
+            },
+            async created (){
+                this.data = await this.result();
+            }
+        });
+        cap.mount('#app');
+    </script>
+</body>
+</html>

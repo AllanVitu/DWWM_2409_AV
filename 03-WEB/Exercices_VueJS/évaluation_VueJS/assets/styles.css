@@ -9,7 +9,7 @@
 
 *{
     margin: 5px;
-    padding: 1px;
+    padding: 2px;
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
@@ -20,6 +20,12 @@ body{
 #titre{
     color: #C490D1;
 }
-.table{
-    
+table{
+    border: 3px, solid;
+}
+div{
+    /*border: 2px, solid, var(--color6);*/
+}
+#form{
+    border: 2px, solid, var(--color6);
 }

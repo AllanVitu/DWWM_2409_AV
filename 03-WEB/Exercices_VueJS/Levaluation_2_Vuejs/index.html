@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="./assets/styles.css">
-    <title>L'évaluation</title>
+    <title>L'éval</title>
 </head>
 <body>
     <div id="app">
-        <h1 id="titre">Résultat de l'évaluation</h1>
+        <h1>Résultat de l'évaluation</h1>
 
-        <form id="form">
+        <form>
             <h4>Ajouter une note</h4>
             <div>
                 <label for="fullname">Nom Prénom</label>
@@ -38,10 +38,11 @@
                     <th>Obtenu</th>
                 </tr>
             </thead>
+
             <tbody>
                 <tr v-for="(d, i) in trieData" :key="i">
                     <td>{{ d.fullname.split(' ')[0] }}</td>
-                    <td>{{ d.fullname.split(' ')[1] }}</td>
+                    <td>{{ d.fullname(' ')[1] }}</td>
                     <td>{{ d.grade }}</td>
                     <td>{{ d.grade >= 12 ? 'Oui' : 'Non' }}</td>
                 </tr>
@@ -55,57 +56,44 @@
             <li>Note éliminatoire : {{ failingGrade }}</li>
         </ul>
     </div>
+
     <script>
         const vm = Vue.createApp({
-            
-            data (){
-                return {
+
+            data(){
+                return{
                     data: [],
                     failingGrade: 12,
-                    student: {
+                    student : {
                         fullname: '',
                         grade: 0
                     }
                 }
             },
             computed: {
-                trieData() {
+                trieData(){
                     return this.data.sort((a, b) => b.grade - a.grade)
                 },
-                avg() {
-                    return this.data.reduce((a, b) => a + b.grade, 0) / this.data.length
+                avg(){
+                    return this.data.reduce((a, b) => a +b.grade, 0) / this.data.length
                 },
                 nbStudentsAboveAvg() {
                     return this.data.filter(d => d.grade > this.avg).length
                 }
+
             },
 
             methods: {
-                async getEval() {
-                    const response = await fetch('./assets/eval.json')
+                async getEval(){
+                    const response = await fetch('./assets/main.json')
                     return await response.json()
-                    const addName = 'addName'
-                    addName.push()
                 }
             },
-            async created ()  {
+            async created() {
                 this.data = await this.getEval()
             }
         });
-        
         vm.mount('#app');
-
-        /* Ces deux façon de faire donnent le même résultat
-        * Tu peux utiliser la condition ternaire (la première façon) seulement si tu n'as qu'une instruction à faire
-        return (d.grade >= 12) ? 'Oui' : 'Non'
-       
-        if(d.grade >= 12) {
-            return 'Oui'
-        }
-        else {
-            return 'Non'
-        }
-        */
     </script>
 </body>
 </html>
