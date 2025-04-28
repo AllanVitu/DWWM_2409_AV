@@ -18,7 +18,7 @@ function getRetired(int $age):string
     
     if($age < $retraite){
         $anneRestante = $retraite - $age;
-        return "Il vous reste $anneRestante ans.";
+        return "Il vous reste $anneRestante ans avant la retraite.";
     }elseif($age > $retraite){
         $anneRestante = $age - $retraite;
         return "Vous etes a la retraite depuis $anneRestante ans.";
@@ -33,9 +33,56 @@ echo getRetired(-2) . PHP_EOL;
 
 //EX: 4.C
 
- function getMax()
+ function getMax(float $_nombreMax, float $_nombreMid, float $_nombreMin):float
  {
-    
+    if($_nombreMax == $_nombreMid || $_nombreMax == $_nombreMin || $_nombreMid == $_nombreMin){
+        return 0;
+    }
+
+    //Trouve le Nombre Max
+
+    $max = max($_nombreMax, $_nombreMid, $_nombreMin);
+
+    return round($max, 3);
  }
+
+ echo getMax(5.555, 5.555, 3.333);
+ echo getMax(6.2563, 4.5213585, 1.2578);
+
+ 
+ // EX: 4.D
+
+ function capitalCity(string $_pays):string
+ {
+    $_pays = strtolower($_pays);
+
+    switch($_pays){
+        case 'france':
+            return 'Paris' . PHP_EOL;
+        case 'allemagne':
+            return 'Berlin' . PHP_EOL;
+        case 'italie':
+            return 'Rome' . PHP_EOL;
+        case 'maroc':
+            return 'Rabat' . PHP_EOL;
+        case 'espagne':
+            return 'Madrid' . PHP_EOL;
+        case 'portugal':
+            return 'Lisbonne' . PHP_EOL;
+        case 'angleterre':
+            return 'Londres' . PHP_EOL;
+        default:
+            return 'Capitale inconnue' . PHP_EOL;
+    }
+ }
+ echo capitalCity('France');
+ echo capitalCity('allemagne');
+ echo capitalCity('italie');
+ echo capitalCity('maroc');
+ echo capitalCity('espagne');
+ echo capitalCity('portugal');
+ echo capitalCity('angleterre');
+ echo capitalCity('amerique')
+
 
 ?>
