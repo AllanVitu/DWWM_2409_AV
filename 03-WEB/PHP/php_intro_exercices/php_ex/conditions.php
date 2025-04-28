@@ -83,6 +83,4 @@ echo getRetired(-2) . PHP_EOL;
  echo capitalCity('portugal');
  echo capitalCity('angleterre');
  echo capitalCity('amerique')
-
-
 ?>
