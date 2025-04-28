@@ -33,6 +33,9 @@ echo getRetired(-2) . PHP_EOL;
 
 //EX: 4.C
 
-
+ function getMax()
+ {
+    
+ }
 
 ?>
