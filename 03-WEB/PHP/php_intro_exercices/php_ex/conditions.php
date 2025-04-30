@@ -19,10 +19,12 @@ function getRetired(int $age):string
     if($age < $retraite){
         $anneRestante = $retraite - $age;
         return "Il vous reste $anneRestante ans avant la retraite.";
-    }elseif($age > $retraite){
+    }
+    elseif($age > $retraite){
         $anneRestante = $age - $retraite;
         return "Vous etes a la retraite depuis $anneRestante ans.";
-    }else{
+    }
+    else{
         return "Vous etes a la retraite cette année !";
     }
 }
@@ -46,8 +48,8 @@ echo getRetired(-2) . PHP_EOL;
     return round($max, 3);
  }
 
- echo getMax(5.555, 5.555, 3.333);
- echo getMax(6.2563, 4.5213585, 1.2578);
+ echo getMax(5.555, 5.555, 3.333) . PHP_EOL;
+ echo getMax(6.2563, 4.5213585, 1.2578) . PHP_EOL;
 
  
  // EX: 4.D

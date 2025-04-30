@@ -58,13 +58,31 @@ function sortItem(array $_tab3):array
 $result = sortItem($names);
 print_r($result);
 
+$emptyTab = [];
+$result = sortItem($emptyTab);
+print_r($result);
+
 
 //EX: 5.D
 
-function stringItem(array $_tab4):array
+function stringItem(array $_tab4):string
 {
-    
+    if(empty($_tab4)){
+        return ' Nothing to display';
+    }
+
+    $sortTab = $_tab4;
+    sort($sortTab);
+
+    return implode(', ', $sortTab);
 }
+
+$result = stringItem($names);
+echo $result;
+
+$emptyTab2 = [];
+$result = stringItem($emptyTab2);
+echo $result;
 ?>
 
 
