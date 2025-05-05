@@ -1,31 +1,23 @@
 <?php
 
+//EX : 6.A
+
 function getToday():string
 {
-    $date = date('d/m/Y');
-
-    return $date;
-
-    echo $date;
+    $date = new DateTime('now');
+    $date2 = $date->format('d/m/Y');
+    return $date2;
 }
+echo getToday();
 
-$dateAjd
-
-
-
+//EX: 6.B
 
 
+function getTimeLeft(string $chaineDate):string
+{
 
+    $tabDate = explode("-", $chaineDate);
+    
 
-
-
-
-
-
-
-
-
-
-
-
+}    
 ?>
