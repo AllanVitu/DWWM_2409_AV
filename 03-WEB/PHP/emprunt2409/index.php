@@ -8,23 +8,53 @@
 </head>
 
 <body>
-    <?php
-    include "./models/Pret..php";
+<?php
+        try {
 
-    $objPret = new Pret(10000, 5.3, 5);
+            $connect = new PDO('mysql:host=localhost;port=3306;dbname=annuaire;charset=utf8', 'root', '');
+        } catch (Exception $e) {
 
-    echo $objPret->calculMensualite2() . "<br>";
+            echo $e->getMessage();
+        }
 
-    // $tableauAmrt= $objPret->getTableauAmortissement();
-    // var_export($tableauAmrt);
+        $rq = "SELECT * from carnet where carnet.VILLE like 'ORLEANS%' ";
 
-    $chainetab = $objPret->getTableauAmortissementJSON();
-    echo $chainetab;
-    $objPret->getreportJSON();
-    $objPret2 = new Pret(150000, 2.4, 15);
-    $objPret2->getreportJSON();
+        $PDOstatement = $connect->query($rq, PDO::FETCH_ASSOC);
 
-    ?>
+        while ($ligne = $PDOstatement->fetch()) {
+
+            var_export($ligne);
+            echo "<br>";
+        }
+
+        //var_export( $PDOstatement->fetchAll(PDO::FETCH_ASSOC) );
+
+        // $tabglobal = $PDOstatement->fetchAll(PDO::FETCH_ASSOC);
+        // for ($i = 0; $i < count($tabglobal); $i++) {
+
+        //     echo " Nom :" . $tabglobal[$i]["NOM"] . "  &nbsp;&nbsp;&nbsp;&nbsp; Prenom:" . $tabglobal[$i]['PRENOM'] . "<br>";
+        // }
+
+        // requete préparée
+        $rq = " SELECT * FROM carnet WHERE carnet.VILLE=:ville";
+
+        $stmt = $connect->prepare($rq);
+        $ville = "PRAGUE";
+        $stmt->bindParam(':ville', $ville, PDO::PARAM_STR);
+        $test = $stmt->execute();
+        if ($test == true) {
+
+            $tabglobal = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            for ($i = 0; $i < count($tabglobal); $i++) {
+
+                echo " Nom :" . $tabglobal[$i]["NOM"] . "  &nbsp;&nbsp;&nbsp;&nbsp; Prenom:" . $tabglobal[$i]['PRENOM'] . " Ville : " . $tabglobal[$i]['VILLE'] . "  <br>";
+            }
+        } else {
+            echo " la requete a échouée";
+        }
+
+
+        ?>
 </body>
 
 </html>
