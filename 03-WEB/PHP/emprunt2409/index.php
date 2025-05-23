@@ -72,15 +72,8 @@
 
     $monAnnuaire = new AnnuaireRepository();
     var_export($monAnnuaire->info_table());
-
-
-
+    
     ?>
-
-
-
-</body>
-
+    </body>
 </html>
 
-</html>

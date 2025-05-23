@@ -10,7 +10,7 @@ require_once ('Voiture.php');
 class voiture_course extends Voiture
 {
 
-	
+	private float $salaire;
 
 
 	/**
@@ -32,6 +32,11 @@ class voiture_course extends Voiture
 	public function afficher()
 	{
 	}
+  public function calculerCharges( )
+  {
+$this->salaire; 
 
+
+  }
 }
 ?>

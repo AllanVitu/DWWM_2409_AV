@@ -27,7 +27,7 @@ class Voiture
 	 */
 	public function __construct(string $_marque, string $_modele, Moteur $_leMotor, float $_poids = 1000, int $_puissance = 5)
 	{
-		$
+		
 	}
 
 	public function getleMotor():Moteur
