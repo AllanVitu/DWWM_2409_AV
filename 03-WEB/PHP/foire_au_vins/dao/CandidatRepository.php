@@ -1,6 +1,5 @@
 <?php
 
-
 //include " Dbconnect.php"; 
 class CandidatRepository
 {
@@ -72,7 +71,6 @@ class CandidatRepository
 
  public function signIn(string $_mail_user, string $_pass_user): array 
 {
-
   $rq=" SELECT candidats.lastname_user,candidats.firstname_user, candidats.mail_user,candidats.departement_user ,candidats.pass_user, candidats.age_user  FROM candidats WHERE mail_user = ? ";
 
   $stmt=$this->myConnect->prepare($rq);
@@ -91,11 +89,6 @@ class CandidatRepository
   }
 
   return []; 
-
-
 }
-   
-  
 
-  
 }
